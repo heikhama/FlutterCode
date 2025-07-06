@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:myfirstapp/UI/user_input.dart';
 import 'UI/aboutus.dart';
 import 'UI/contactus.dart';
+import 'UI/listGridView.dart';
 void main() {
   runApp(MyApp());
 }
@@ -60,10 +62,19 @@ class HomePage extends StatelessWidget{
             SizedBox(height: 20),
             ElevatedButton(onPressed: (){
               Navigator.push(
-                context, MaterialPageRoute(builder:(_) => UserInput()),
+                context, MaterialPageRoute(builder:(_) => FormExample()),
               );
             },
               child: Text('User Input Form'),),
+            SizedBox(height: 20),
+            ElevatedButton(onPressed: (){
+              Navigator.push(
+                context, MaterialPageRoute(builder:(_) => listGridView()),
+              );
+            },
+              child: Text('List & Grid View '),),
+
+
           ],
         ),
       ),
